@@ -1,0 +1,25 @@
+@import '../../../styles/_colors.less';
+
+.item{
+    padding: .5rem;
+    display: block;
+    text-decoration: none;
+    width: 100%;
+    color: rgba(0,0,0,.5);
+    &:focus{
+        color:rgba(0,0,0,.5);
+    }
+    &:hover{
+        color: rgba(0,0,0,.7);
+    }
+    @media screen and (max-width: 575.98px) {
+        padding: .5rem 0;
+    }
+}
+
+.nav-item{
+    position: relative;
+    display: block;
+    width: fit-content;
+    list-style: none;
+}

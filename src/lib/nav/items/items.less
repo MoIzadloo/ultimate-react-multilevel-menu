@@ -1,0 +1,73 @@
+.isCollapse{
+    display: block !important;
+}
+
+.isNavbar:hover > ul{
+    display: block;
+}
+
+.dropDown{
+    display: flex !important;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: row;
+}
+
+.dropDown::after{
+    display: inline-block;
+    margin-left: .255em;
+    content: "";
+    border-top: .3em solid;
+    border-right: .3em solid transparent;
+    border-bottom: 0;
+    border-left: .3em solid transparent;
+    box-sizing: border-box;
+}
+
+.nav-items{
+    display: none;
+    width: fit-content;
+    list-style: none;
+    position: absolute;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #fff;
+    border-radius: .25rem;
+    li{
+        width: 100%;
+    }
+    ul{
+        display: none;
+        top: 0;
+        width: 100%;
+        left: 100%;
+    }
+    a{
+        box-sizing: border-box;
+        padding: .5rem 1.5rem;
+    }
+    .dropDown::after{
+        border-top: .3em solid transparent;
+        border-right: 0;
+        border-bottom: .3em solid transparent;
+        border-left: .3em solid;
+    }
+    @media screen and (max-width: 575.98px) {
+        position: relative;
+        a {
+            padding: .5rem;
+        }
+        .dropDown::after{
+            border-top: .3em solid;
+            border-right: .3em solid transparent;
+            border-bottom: 0;
+            border-left: .3em solid transparent;
+        }
+        ul{
+            left: 0;
+        }
+        li{
+            padding: 0 10px;
+        }
+    }
+}

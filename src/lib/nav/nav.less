@@ -1,0 +1,94 @@
+@import '../../styles/theme.less';
+@import '../../styles/_colors.less';
+
+.navbar{
+    position: relative;
+    display: flex;
+    align-items: center;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    padding: .5rem;
+    @media screen and (max-width: 575.98px) {
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+}
+
+.navbar-light{
+    .navbar-toggler{
+        &-line {
+            background-color: rgba(0,0,0, .9);
+        }
+    }
+    .logo-container > a{
+        color: rgba(0,0,0,.5);
+        &:focus{
+            color:rgba(0,0,0, .9);
+        }
+        &:hover{
+            color: rgba(0,0,0,.7);
+        }
+    }
+    .item{
+        color: rgba(0,0,0,.5);
+        &:focus{
+            color:rgba(0,0,0, .9);
+        }
+        &:hover{
+            color: rgba(0,0,0,.7);
+        }
+    }
+}
+
+.navbar-dark{
+    .item{
+        color: rgba(255,255,255,.75);
+        &:focus{
+            color: rgba(255,255,255,.75);
+        }
+        &:hover{
+            color: rgba(255,255,255,.75);
+        }
+    }
+    .navbar-toggler{
+        &-line {
+            background-color: @white;
+        }
+    }
+    .logo-container > a{
+        color: rgba(0,0,0,.5);
+        &:focus{
+            color:rgba(0,0,0, .9);
+        }
+        &:hover{
+            color: rgba(0,0,0,.7);
+        }
+    }
+    .nav-items{
+        .item{
+            color: rgba(0,0,0,.5);
+            &:focus{
+                color:rgba(0,0,0, .9);
+            }
+            &:hover{
+                color: rgba(0,0,0,.7);
+            }
+        }
+    }
+}
+
+.bg-white{
+    background-color: @white;
+}
+
+.bg-light{
+    background-color: @light;
+}
+
+.bg-dark{
+    background-color: @dark;
+}
+
+.bg-primary{
+    background-color: @primary;
+}

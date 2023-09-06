@@ -1,0 +1,35 @@
+name: Github Pages
+
+on:
+  push:
+    branches: [main]
+
+jobs:
+  styleguide:
+    runs-on: ubuntu-latest
+
+    permissions:
+      contents: write
+      packages: read
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Use Node.js 16.x
+        uses: actions/setup-node@v3
+        with:
+          node-version: 16.x
+
+      - name: Install dependencies
+        run: yarn install --frozen-lockfile
+
+      - name: Generate styleguide
+        run: yarn styleguide:build
+
+      - name: Deploy to gh-pages
+        uses: JamesIves/github-pages-deploy-action@v4.3.4
+        with:
+          branch: gh-pages
+          folder: docs
+
