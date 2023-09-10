@@ -1500,6 +1500,13 @@ abab@^2.0.3, abab@^2.0.5:
   resolved "https://registry.npmjs.org/abab/-/abab-2.0.6.tgz"
   integrity sha512-j2afSsaIENvHZN2B8GOpF566vZ5WVk5opAiMTvWgaQT8DkbOqsTfvNAvHoRGU2zzP8cPoqys+xHTRDWW8L+/BA==
 
+abort-controller@^3.0.0:
+  version "3.0.0"
+  resolved "https://registry.yarnpkg.com/abort-controller/-/abort-controller-3.0.0.tgz#eaf54d53b62bae4138e809ca225c8439a6efb392"
+  integrity sha512-h8lQ8tacZYnR3vNQTgibj+tODHI5/+l06Au2Pcriv/Gmet0eaj4TwWH41sO9wnHDiQsEj19q0drzdWdeAHtweg==
+  dependencies:
+    event-target-shim "^5.0.0"
+
 accepts@~1.3.4, accepts@~1.3.5, accepts@~1.3.8:
   version "1.3.8"
   resolved "https://registry.npmjs.org/accepts/-/accepts-1.3.8.tgz"
@@ -3397,9 +3404,9 @@ dom-serializer@^1.0.1:
     domhandler "^4.2.0"
     entities "^2.0.0"
 
-domain-browser@^4.19.0:
+domain-browser@^4.22.0:
   version "4.22.0"
-  resolved "https://registry.npmjs.org/domain-browser/-/domain-browser-4.22.0.tgz"
+  resolved "https://registry.yarnpkg.com/domain-browser/-/domain-browser-4.22.0.tgz#6ddd34220ec281f9a65d3386d267ddd35c491f9f"
   integrity sha512-IGBwjF7tNk3cwypFNH/7bfzBcgSCbaMOD3GsaY1AU/JRrnHnYgEM0+9kQt52iZxjNsjBtJYtao146V+f8jFZNw==
 
 domelementtype@^2.0.1, domelementtype@^2.2.0:
@@ -3968,6 +3975,11 @@ etag@~1.8.1:
   version "1.8.1"
   resolved "https://registry.npmjs.org/etag/-/etag-1.8.1.tgz"
   integrity sha512-aIL5Fx7mawVa300al2BnEE4iNvo1qETxLrPI/o05L7z6go7fCw1J6EQmbK4FmJ2AS7kgVF/KEZWufBfdClMcPg==
+
+event-target-shim@^5.0.0:
+  version "5.0.1"
+  resolved "https://registry.yarnpkg.com/event-target-shim/-/event-target-shim-5.0.1.tgz#5d4d3ebdf9583d63a5333ce2deb7480ab2b05789"
+  integrity sha512-i/2XbnSz/uxRCU6+NdVJgKWDTM427+MqYbkQzD321DuCQJUqOuJKIA0IM2+W2xtYHdKOmZ4dR6fExsd4SXL+WQ==
 
 eventemitter3@^4.0.0, eventemitter3@^4.0.4:
   version "4.0.7"
@@ -7022,10 +7034,10 @@ node-int64@^0.4.0:
   resolved "https://registry.npmjs.org/node-int64/-/node-int64-0.4.0.tgz"
   integrity sha512-O5lz91xSOeoXP6DulyHfllpq+Eg00MWitZIbtPfoSEvqIHdl5gfcY6hYzDWnj0qD5tz52PI08u9qUvSVeUBeHw==
 
-node-polyfill-webpack-plugin@^1.1.4:
-  version "1.1.4"
-  resolved "https://registry.npmjs.org/node-polyfill-webpack-plugin/-/node-polyfill-webpack-plugin-1.1.4.tgz"
-  integrity sha512-Z0XTKj1wRWO8o/Vjobsw5iOJCN+Sua3EZEUc2Ziy9CyVvmHKu6o+t4gUH9GOE0czyPR94LI6ZCV/PpcM8b5yow==
+node-polyfill-webpack-plugin@^2.0.1:
+  version "2.0.1"
+  resolved "https://registry.yarnpkg.com/node-polyfill-webpack-plugin/-/node-polyfill-webpack-plugin-2.0.1.tgz#141d86f177103a8517c71d99b7c6a46edbb1bb58"
+  integrity sha512-ZUMiCnZkP1LF0Th2caY6J/eKKoA0TefpoVa68m/LQU1I/mE8rGt4fNYGgNuCcK+aG8P8P43nbeJ2RqJMOL/Y1A==
   dependencies:
     assert "^2.0.0"
     browserify-zlib "^0.2.0"
@@ -7033,7 +7045,7 @@ node-polyfill-webpack-plugin@^1.1.4:
     console-browserify "^1.2.0"
     constants-browserify "^1.0.0"
     crypto-browserify "^3.12.0"
-    domain-browser "^4.19.0"
+    domain-browser "^4.22.0"
     events "^3.3.0"
     filter-obj "^2.0.2"
     https-browserify "^1.0.0"
@@ -7042,12 +7054,13 @@ node-polyfill-webpack-plugin@^1.1.4:
     process "^0.11.10"
     punycode "^2.1.1"
     querystring-es3 "^0.2.1"
-    readable-stream "^3.6.0"
+    readable-stream "^4.0.0"
     stream-browserify "^3.0.0"
     stream-http "^3.2.0"
     string_decoder "^1.3.0"
     timers-browserify "^2.0.12"
     tty-browserify "^0.0.1"
+    type-fest "^2.14.0"
     url "^0.11.0"
     util "^0.12.4"
     vm-browserify "^1.1.2"
@@ -8343,6 +8356,17 @@ readable-stream@^2.0.1, readable-stream@^2.0.2:
     safe-buffer "~5.1.1"
     string_decoder "~1.1.1"
     util-deprecate "~1.0.1"
+
+readable-stream@^4.0.0:
+  version "4.4.2"
+  resolved "https://registry.yarnpkg.com/readable-stream/-/readable-stream-4.4.2.tgz#e6aced27ad3b9d726d8308515b9a1b98dc1b9d13"
+  integrity sha512-Lk/fICSyIhodxy1IDK2HazkeGjSmezAWX2egdtJnYhtzKEsBPJowlI6F6LPb5tqIQILrMbx22S5o3GuJavPusA==
+  dependencies:
+    abort-controller "^3.0.0"
+    buffer "^6.0.3"
+    events "^3.3.0"
+    process "^0.11.10"
+    string_decoder "^1.3.0"
 
 readdirp@^2.2.1:
   version "2.2.1"
@@ -9841,6 +9865,11 @@ type-fest@^0.8.1:
   version "0.8.1"
   resolved "https://registry.npmjs.org/type-fest/-/type-fest-0.8.1.tgz"
   integrity sha512-4dbzIzqvjtgiM5rw1k5rEHtBANKmdudhGyBEajN01fEyhaAIhsoKNy6y7+IN93IfpFtwY9iqi7kD+xwKhQsNJA==
+
+type-fest@^2.14.0:
+  version "2.19.0"
+  resolved "https://registry.yarnpkg.com/type-fest/-/type-fest-2.19.0.tgz#88068015bb33036a598b952e55e9311a60fd3a9b"
+  integrity sha512-RAH822pAdBgcNMAfWnCBU3CFZcfZ/i1eZjwFU/dsLKumyuuP3niueg2UAukXYF0E2AAoc82ZSSf9J0WQBinzHA==
 
 type-is@~1.6.18:
   version "1.6.18"
