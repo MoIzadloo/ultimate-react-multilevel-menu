@@ -1,8 +1,8 @@
 {
     "name":"The Ultimate React Multilevel Menu",
     "short_name":"URMM",
-    "scope": "/",
-    "start_url": "/",
+    "scope": "/ultimate-react-multilevel-menu/",
+    "start_url": "/ultimate-react-multilevel-menu/",
     "_colors_color":"#ffffff",
     "background_color":"#ffffff",
     "display":"standalone",

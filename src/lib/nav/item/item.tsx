@@ -8,11 +8,12 @@ import './item.less'
  * @returns Element
  */
 function Item (props: ItemProps): JSX.Element {
+  const { as: Cmp = 'a', ...rest } = props
   return (
     <li className={classNames('nav-item', props.className)}>
-      <a className={classNames('item')} href={props.href}>
+      <Cmp {...rest} className={classNames('item')}>
         {props.children}
-      </a>
+      </Cmp>
     </li>
   )
 }

@@ -5,11 +5,7 @@ import classnames from 'classnames'
   <Collapse>
     <Items href={'#about'} title="About">
       <Item href={'#introduction'}>Introduction</Item>
-      <Items href={'#about'} title="About">
-        <Item href={'#introduction'}>Introduction</Item>
-      </Items>
     </Items>
-    <Item href={'#introduction'}>Introduction</Item>
   </Collapse>
 </Nav>
 ```

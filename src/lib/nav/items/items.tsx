@@ -8,20 +8,21 @@ import './items.less'
  * @returns Element
  */
 function Items (props: ItemsProps): JSX.Element {
+  const { as: Cmp = 'a', ...rest } = props
   const [isPopped, setPop] = useState(false)
   return (
     <li className={classNames('nav-item', { isNavbar: !(props.isCollapse ?? false) }, props.className)}>
-      <a
-        onClick={(e) => {
+      <Cmp
+        onClick={(e: any) => {
           if (props.isCollapse === true) {
             if (!isPopped) {
               e.preventDefault()
             }
             setPop(!isPopped)
           }
-        }} className={classNames('item', 'dropDown')} href={props.href}
+        }} {...rest} className={classNames('item', 'dropDown')}
       >{props.title}
-      </a>
+      </Cmp>
       <ul className={classNames('nav-items', { isCollapse: (props.isCollapse ?? true) && isPopped })}>
         {props.children}
       </ul>

@@ -8,11 +8,12 @@ import './logo.less'
  * @returns Element
  */
 function Logo (props: logoProps): JSX.Element {
+  const { as: Cmp = 'a', ...rest } = props
   return (
     <div className={classNames('logo-container', props.className)}>
-      <a href={props.href}>
+      <Cmp {...rest}>
         {props.children}
-      </a>
+      </Cmp>
     </div>
   )
 }

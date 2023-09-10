@@ -17,11 +17,11 @@ function Collapse (props: CollapseProps): JSX.Element {
         if (child.type === Items) {
           return React.cloneElement(child, { isCollapse: true }, traverse(child.props))
         } else {
-          return React.cloneElement(child)
+          return React.cloneElement(child, { isCollapse: true })
         }
       }))
     } else if (typeof props.children === 'object') {
-      clone.push(React.cloneElement(props.children))
+      clone.push(React.cloneElement(props.children, { isCollapse: true }))
     }
     return clone
   }
