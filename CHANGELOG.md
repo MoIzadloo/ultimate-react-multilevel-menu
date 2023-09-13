@@ -1,7 +1,8 @@
 # [v2.0.0](https://github.com/MoIzadloo/ultimate-react-multilevel-menu/compare/v1.0.0...v2.0.0) (2023-09-10)
 
 ## 💥 Breaking Changes
-- [`b7bd9b0`](https://github.com/MoIzadloo/ultimate-react-multilevel-menu/commit/b7bd9b0)  feat: add rtl support and update README.md
+
+- [`b7bd9b0`](https://github.com/MoIzadloo/ultimate-react-multilevel-menu/commit/b7bd9b0) feat: add rtl support and update README.md
 
 # v1.0.0 (2023-09-06)
 

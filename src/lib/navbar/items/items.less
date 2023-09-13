@@ -1,19 +1,19 @@
-.isCollapse{
+.collapsed{
     display: block !important;
 }
 
-.isNavbar:hover > ul{
+.is-navbar:hover > ul{
     display: block;
 }
 
-.dropDown{
+.dropdown{
     display: flex !important;
     justify-content: flex-start;
     align-items: center;
     flex-direction: row;
 }
 
-.dropDown::after{
+.dropdown::after{
     display: inline-block;
     margin-left: .255em;
     content: "";
@@ -33,6 +33,7 @@
     box-sizing: border-box;
     background-color: #fff;
     border-radius: .25rem;
+    z-index: 100;
     li{
         width: 100%;
     }
@@ -48,7 +49,7 @@
         box-sizing: border-box;
         padding: .5rem 1.5rem;
     }
-    .dropDown::after{
+    .dropdown::after{
         border-top: .3em solid transparent;
         border-right: 0;
         border-bottom: .3em solid transparent;
@@ -59,7 +60,7 @@
         a {
             padding: .5rem;
         }
-        .dropDown::after{
+        .dropdown::after{
             border-top: .3em solid;
             border-right: .3em solid transparent;
             border-bottom: 0;

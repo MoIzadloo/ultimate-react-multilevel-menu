@@ -4,10 +4,10 @@
 
 URMM is a responsive menu react component. It's designed to be customizable and user-friendly.
 
-- **User-friendly** simple and eligent
+- **User-friendly** simple and elegant
 - **Customizable** to be suited to your needs
 - **RTL-Support** to support different languages
-- **Mutli-level** to go as deep as you want
+- **Multi-level** to go as deep as you want
 
 # Pros
 
@@ -15,9 +15,9 @@ URMM is a responsive menu react component. It's designed to be customizable and 
 2. URMM supports multi-level menus
 3. URMM is easy to implement
 
-## Demo.
+## Demo
 
-Documentation is [here](https://moizadloo.github.io/ultimate-react-multilevel-menu/).
+Documentation is [here](https://moizadloo.github.io/ultimate-react-multilevel-menu/)
 
 ## Install
 
@@ -31,18 +31,29 @@ or
 yarn add ultimate-react-multilevel-menu
 ```
 
+## Stylesheets
+
+Make sure to include shipped CSS in your application to apply the correct styling to all components
+
+```tsx
+  {
+    /* The following line can be included in your src/index.js or App.js file */
+  }
+  import 'ultimate-react-multilevel-menu/dist/index.css'
+```
+
+
 ## Minimum Working Set Up
 
 ```tsx
 import {
-  Nav,
+  Navbar,
   Collapse,
   Item,
   Items,
   Logo
 } from 'ultimate-react-multilevel-menu'
-
-;<Nav className={'navbar-light bg-white'}>
+;<Navbar className={'navbar-light bg-white'}>
   <Logo href="/">Logo</Logo>
   <Collapse>
     <Item href={'#home'}>Home</Item>
@@ -56,14 +67,14 @@ import {
     </Items>
     <Item href={'#pricing'}>Pricing</Item>
   </Collapse>
-</Nav>
+</Navbar>
 ```
 
 ## Componnents
 
-### Nav
+### Navbar
 
-Nav component is container of all other components and you can change the color scheme by using the predefined css classes or your custom css classes
+The navbar component is the container of all other components and you can change the color scheme by using the predefined CSS classes or your custom CSS classes
 
 #### Props
 
@@ -74,7 +85,17 @@ Nav component is container of all other components and you can change the color 
 
 ### Collapse
 
-Collapse component is container of Item and Items components and it's responsible to make the menu responsive and elegant on small screens
+The collapse component is the container of the Nav component and it's responsible for making the menu responsive and elegant on small screens
+
+#### Props
+
+| Name | Type | Default | Description |
+| ---- | ---- | ------- | ----------- |
+
+### Nav
+
+The Nav component is a container of Item and Items components, in fact, the Collapse component uses the Nav component to wrap Item and Items components under the hood.
+in case you don't want the collapse toggle button you can use it directly instead.
 
 #### Props
 
@@ -83,7 +104,7 @@ Collapse component is container of Item and Items components and it's responsibl
 
 ### Logo
 
-Logo component is container of your logo which can be an image or a simple text
+The logo component is the container of your logo which can be an image or simple text
 
 #### Props
 
@@ -107,7 +128,7 @@ Item component is a single link
 
 ### Items
 
-Items component is a link and a container for other Item or Items components
+Items component is a link and a container for other Items or Items components
 
 #### Props
 
@@ -119,4 +140,4 @@ Items component is a link and a container for other Item or Items components
 
 ### Contact Me
 
-Email : `moizadloo@gmail.com`
+Email: `moizadloo@gmail.com`

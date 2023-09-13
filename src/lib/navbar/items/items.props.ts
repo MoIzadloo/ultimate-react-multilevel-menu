@@ -4,7 +4,6 @@ interface ItemsProps extends Partial<Omit<HTMLAnchorElement, 'children'>> {
   children?: ReactNode
   title?: string
   href?: string
-  isCollapse?: boolean
   as?: ElementType
 }
 

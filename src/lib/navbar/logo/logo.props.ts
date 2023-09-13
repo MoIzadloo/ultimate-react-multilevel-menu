@@ -1,9 +1,9 @@
 import { ElementType, ReactNode } from 'react'
 
-interface logoProps extends Partial<Omit<HTMLAnchorElement, 'children'>> {
+interface LogoProps extends Partial<Omit<HTMLDivElement, 'children'>> {
   children?: ReactNode
   href?: string
   as?: ElementType
 }
 
-export default logoProps
+export default LogoProps

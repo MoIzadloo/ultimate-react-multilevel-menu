@@ -1,7 +1,7 @@
 ```tsx padded
-import { Nav, Collapse, Item, Items, Logo } from '../'
+import { Navbar, Collapse, Item, Items, Logo } from '../'
 import classnames from 'classnames'
-;<Nav className={classnames('navbar-light', 'bg-white')}>
+;<Navbar className={classnames('navbar-light', 'bg-white')}>
   <Logo href="/">Logo</Logo>
   <Collapse>
     <Item href={'#home'}>Home</Item>
@@ -15,7 +15,7 @@ import classnames from 'classnames'
     </Items>
     <Item href={'#pricing'}>Pricing</Item>
   </Collapse>
-</Nav>
+</Navbar>
 ```
 
 ### Color schemes
@@ -23,9 +23,9 @@ import classnames from 'classnames'
 #### Dark
 
 ```tsx padded
-import { Nav, Collapse, Item, Items, Logo } from '../'
+import { Navbar, Collapse, Item, Items, Logo } from '../'
 import classnames from 'classnames'
-;<Nav className={classnames('navbar-dark', 'bg-dark')}>
+;<Navbar className={classnames('navbar-dark', 'bg-dark')}>
   <Logo href="/">Logo</Logo>
   <Collapse>
     <Item href={'#home'}>Home</Item>
@@ -39,15 +39,15 @@ import classnames from 'classnames'
     </Items>
     <Item href={'#pricing'}>Pricing</Item>
   </Collapse>
-</Nav>
+</Navbar>
 ```
 
 #### Light
 
 ```tsx padded
-import { Nav, Collapse, Item, Items, Logo } from '../'
+import { Navbar, Collapse, Item, Items, Logo } from '../'
 import classnames from 'classnames'
-;<Nav className={classnames('navbar-light', 'bg-white')}>
+;<Navbar className={classnames('navbar-light', 'bg-white')}>
   <Logo href="/">Logo</Logo>
   <Collapse>
     <Item href={'#home'}>Home</Item>
@@ -61,15 +61,15 @@ import classnames from 'classnames'
     </Items>
     <Item href={'#pricing'}>Pricing</Item>
   </Collapse>
-</Nav>
+</Navbar>
 ```
 
 #### Primary
 
 ```tsx padded
-import { Nav, Collapse, Item, Items, Logo } from '../'
+import { Navbar, Collapse, Item, Items, Logo } from '../'
 import classnames from 'classnames'
-;<Nav className={classnames('navbar-dark', 'bg-primary')}>
+;<Navbar className={classnames('navbar-dark', 'bg-primary')}>
   <Logo href="/">Logo</Logo>
   <Collapse>
     <Item href={'#home'}>Home</Item>
@@ -83,15 +83,15 @@ import classnames from 'classnames'
     </Items>
     <Item href={'#pricing'}>Pricing</Item>
   </Collapse>
-</Nav>
+</Navbar>
 ```
 
 #### Gray
 
 ```tsx padded
-import { Nav, Collapse, Item, Items, Logo } from '../'
+import { Navbar, Collapse, Item, Items, Logo } from '../'
 import classnames from 'classnames'
-;<Nav className={classnames('navbar-dark', 'bg-gray')}>
+;<Navbar className={classnames('navbar-dark', 'bg-gray')}>
   <Logo href="/">Logo</Logo>
   <Collapse>
     <Item href={'#home'}>Home</Item>
@@ -105,7 +105,7 @@ import classnames from 'classnames'
     </Items>
     <Item href={'#pricing'}>Pricing</Item>
   </Collapse>
-</Nav>
+</Navbar>
 ```
 
 ### Props
@@ -115,9 +115,9 @@ import classnames from 'classnames'
 ##### RTL
 
 ```tsx padded
-import { Nav, Collapse, Item, Items, Logo } from '../'
+import { Navbar, Collapse, Item, Items, Logo } from '../'
 import classnames from 'classnames'
-;<Nav className={classnames('navbar-ligth', 'bg-light')} dir={'rtl'}>
+;<Navbar className={classnames('navbar-ligth', 'bg-light')} dir={'rtl'}>
   <Logo href={'/'}>
     <img src={'logo.png'} />
   </Logo>
@@ -133,15 +133,15 @@ import classnames from 'classnames'
     </Items>
     <Item href={'#pricing'}>Pricing</Item>
   </Collapse>
-</Nav>
+</Navbar>
 ```
 
 ##### LTR
 
 ```tsx padded
-import { Nav, Collapse, Item, Items, Logo } from '../'
+import { Navbar, Collapse, Item, Items, Logo } from '../'
 import classnames from 'classnames'
-;<Nav className={classnames('navbar-ligth', 'bg-light')} dir={'ltr'}>
+;<Navbar className={classnames('navbar-ligth', 'bg-light')} dir={'ltr'}>
   <Logo href={'/'}>
     <img src={'logo.png'} />
   </Logo>
@@ -157,5 +157,5 @@ import classnames from 'classnames'
     </Items>
     <Item href={'#pricing'}>Pricing</Item>
   </Collapse>
-</Nav>
+</Navbar>
 ```

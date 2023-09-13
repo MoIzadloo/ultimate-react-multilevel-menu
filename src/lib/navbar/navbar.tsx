@@ -1,13 +1,13 @@
 import React from 'react'
-import NavProps from './nav.props'
+import NavProps from './navbar.props'
 import classNames from 'classnames'
-import './nav.less'
+import './navbar.less'
 
 /**
- * A generic Nav
+ * A generic Navbar
  * @returns Element
  */
-function Nav (props: NavProps): JSX.Element {
+function Navbar (props: NavProps): JSX.Element {
   return (
     <nav className={classNames('navbar', props.className, { rtl: props.dir === 'rtl' ? 'rtl' : '' })}>
       {props.children}
@@ -15,4 +15,4 @@ function Nav (props: NavProps): JSX.Element {
   )
 }
 
-export default Nav
+export default Navbar

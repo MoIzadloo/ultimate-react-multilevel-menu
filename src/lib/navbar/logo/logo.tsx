@@ -1,5 +1,5 @@
 import React from 'react'
-import logoProps from './logo.props'
+import LogoProps from './logo.props'
 import classNames from 'classnames'
 import './logo.less'
 
@@ -7,7 +7,7 @@ import './logo.less'
  * A generic Logo
  * @returns Element
  */
-function Logo (props: logoProps): JSX.Element {
+function Logo (props: LogoProps): JSX.Element {
   const { as: Cmp = 'a', ...rest } = props
   return (
     <div className={classNames('logo-container', props.className)}>

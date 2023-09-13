@@ -1,0 +1,34 @@
+@import '../../../styles/theme.less';
+@import '../../../styles/_colors.less';
+
+.nav{
+    display: flex;
+    flex-direction: row;
+    margin: 0;
+    flex-basis: 100%;
+    flex-grow: 1;
+    padding: 0;
+    @media screen and (max-width: 575.98px) {
+        display: none;
+    }
+}
+
+.navbar-collapse{
+    display: none;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: .5rem 0;
+    margin: 0;
+    flex-basis: 100%;
+    flex-grow: 1;
+    @media screen and (max-width: 575.98px) {
+        display: none;
+        flex-direction: column;
+    }
+}
+
+.show{
+    @media screen and (max-width: 575.98px) {
+        display: flex;
+    }
+}

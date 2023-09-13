@@ -33,9 +33,9 @@ export default [
       nodeResolve(),
       typescript(),
       postcss({
-        extract: false,
-        minimize: false,
-        modules: true,
+        extract: true,
+        minimize: true,
+        modules: false,
         sourceMap: true,
         use: {
           less: { javascriptEnabled: true }

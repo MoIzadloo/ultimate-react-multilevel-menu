@@ -1,4 +1,6 @@
 export {
+  Navbar,
+  NavbarProps,
   Nav,
   NavProps,
   Collapse,
@@ -9,4 +11,4 @@ export {
   ItemsProps,
   Logo,
   LogoProps
-} from './nav'
+} from './navbar'

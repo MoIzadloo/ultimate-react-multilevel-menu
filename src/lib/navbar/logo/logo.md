@@ -1,7 +1,7 @@
 ```tsx padded
-import { Nav, Collapse, Item, Items, Logo } from '../../'
+import { Navbar, Collapse, Item, Items, Logo } from '../../'
 import classnames from 'classnames'
-;<Nav className={classnames('navbar-light')}>
+;<Navbar className={classnames('navbar-light')}>
   <Logo href={'/'}>Logo</Logo>
   <Collapse>
     <Item href={'#home'}>Home</Item>
@@ -15,15 +15,15 @@ import classnames from 'classnames'
     </Items>
     <Item href={'#pricing'}>Pricing</Item>
   </Collapse>
-</Nav>
+</Navbar>
 ```
 
 ### Logo With Image
 
 ```tsx padded
-import { Nav, Collapse, Items, Item, Logo } from '../../'
+import { Navbar, Collapse, Items, Item, Logo } from '../../'
 import classnames from 'classnames'
-;<Nav className={classnames('navbar-light')}>
+;<Navbar className={classnames('navbar-light')}>
   <Logo href={'/'}>
     <img src={'logo.png'} />
   </Logo>
@@ -39,5 +39,5 @@ import classnames from 'classnames'
     </Items>
     <Item href={'#pricing'}>Pricing</Item>
   </Collapse>
-</Nav>
+</Navbar>
 ```

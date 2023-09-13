@@ -1,4 +1,6 @@
 export {
+  Navbar,
+  NavbarProps,
   Nav,
   NavProps,
   Collapse,
