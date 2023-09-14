@@ -1,7 +1,6 @@
 ```tsx padded
 import { Navbar, Nav, Item, Items, Logo } from '../'
 import classnames from 'classnames'
-
 ;<Navbar className={classnames('navbar-light', 'bg-white')}>
   <Logo href="/">Logo</Logo>
   <Nav>

@@ -36,12 +36,11 @@ yarn add ultimate-react-multilevel-menu
 Make sure to include shipped CSS in your application to apply the correct styling to all components
 
 ```tsx
-  {
-    /* The following line can be included in your src/index.js or App.js file */
-  }
-  import 'ultimate-react-multilevel-menu/dist/index.css'
+{
+  /* The following line can be included in your src/index.js or App.js file */
+}
+import 'ultimate-react-multilevel-menu/dist/index.css'
 ```
-
 
 ## Minimum Working Set Up
 

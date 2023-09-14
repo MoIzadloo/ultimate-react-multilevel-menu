@@ -8,7 +8,7 @@ import './items.less'
  * @returns Element
  */
 function Items (props: ItemsProps): JSX.Element {
-  const { as: Cmp = 'a', ...rest } = props
+  const { as: Cmp = 'a', title: Title, ...rest } = props
   const [isPopped, setPop] = useState(false)
 
   const [windowSize, setWindowSize] = useState([
@@ -42,7 +42,7 @@ function Items (props: ItemsProps): JSX.Element {
             setPop(!isPopped)
           }
         }} {...rest} className={classNames('item', 'dropdown')}
-      >{props.title}
+      >{Title}
       </Cmp>
       <ul className={classNames('nav-items', { collapsed: !collapsed && isPopped })}>
         {props.children}

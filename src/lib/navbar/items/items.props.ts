@@ -1,8 +1,8 @@
 import { ReactNode, ElementType } from 'react'
 
-interface ItemsProps extends Partial<Omit<HTMLAnchorElement, 'children'>> {
+interface ItemsProps extends Partial<Omit<Omit<HTMLAnchorElement, 'children'>, 'title'>> {
   children?: ReactNode
-  title?: string
+  title?: ElementType | string
   href?: string
   as?: ElementType
 }
