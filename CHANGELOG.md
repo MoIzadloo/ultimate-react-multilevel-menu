@@ -1,3 +1,8 @@
+# [v3.1.0](https://github.com/MoIzadloo/ultimate-react-multilevel-menu/compare/v3.0.0...v3.1.0) (2023-09-14)
+
+## ✨ New Features
+- [`2615785`](https://github.com/MoIzadloo/ultimate-react-multilevel-menu/commit/2615785)  feat: Items component modified to support elements as input
+
 # [v3.0.0](https://github.com/MoIzadloo/ultimate-react-multilevel-menu/compare/v2.0.0...v3.0.0) (2023-09-13)
 
 ## 💥 Breaking Changes
