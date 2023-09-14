@@ -1,3 +1,8 @@
+# [v3.0.0](https://github.com/MoIzadloo/ultimate-react-multilevel-menu/compare/v2.0.0...v3.0.0) (2023-09-13)
+
+## 💥 Breaking Changes
+- [`87315e5`](https://github.com/MoIzadloo/ultimate-react-multilevel-menu/commit/87315e5)  feat: Many problems have been solved
+
 # [v2.0.0](https://github.com/MoIzadloo/ultimate-react-multilevel-menu/compare/v1.0.0...v2.0.0) (2023-09-10)
 
 ## 💥 Breaking Changes
