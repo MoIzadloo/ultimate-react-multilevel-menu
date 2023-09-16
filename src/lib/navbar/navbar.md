@@ -166,38 +166,40 @@ import classnames from 'classnames'
 
 ```tsx static
 import { Navbar, Collapse, Item, Items, Logo } from '../'
-import classnames from 'classnames';
+import classnames from 'classnames'
 
-<Navbar className={classnames('navbar-light', 'bg-white')}>
-</Navbar>
+;<Navbar className={classnames('navbar-light', 'bg-white')}></Navbar>
 ```
 
 ### Fixed top
 
 ```tsx static
 import { Navbar, Collapse, Item, Items, Logo } from '../'
-import classnames from 'classnames';
+import classnames from 'classnames'
 
-<Navbar className={classnames('navbar-light', 'bg-white', 'fixed-top')}>
-</Navbar>
+;<Navbar
+  className={classnames('navbar-light', 'bg-white', 'fixed-top')}
+></Navbar>
 ```
 
 ### Fixed bottom
 
 ```tsx static
 import { Navbar, Collapse, Item, Items, Logo } from '../'
-import classnames from 'classnames';
+import classnames from 'classnames'
 
-<Navbar className={classnames('navbar-light', 'bg-white', 'fixed-bottom')}>
-</Navbar>
+;<Navbar
+  className={classnames('navbar-light', 'bg-white', 'fixed-bottom')}
+></Navbar>
 ```
 
 ### Sticky Top
 
 ```tsx static
 import { Navbar, Collapse, Item, Items, Logo } from '../'
-import classnames from 'classnames';
+import classnames from 'classnames'
 
-<Navbar className={classnames('navbar-light', 'bg-white', 'sticky-top')}>
-</Navbar>
+;<Navbar
+  className={classnames('navbar-light', 'bg-white', 'sticky-top')}
+></Navbar>
 ```
