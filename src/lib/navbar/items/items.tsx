@@ -1,7 +1,8 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState } from 'react'
 import ItemsProps from './items.props'
 import classNames from 'classnames'
 import './items.less'
+import { NavContext } from '../nav/nav'
 
 /**
  * A generic Items
@@ -11,43 +12,29 @@ function Items (props: ItemsProps): JSX.Element {
   const { as: Cmp = 'a', title: Title, ...rest } = props
   const [isPopped, setPop] = useState(false)
 
-  const [windowSize, setWindowSize] = useState([
-    window.innerWidth,
-    window.innerHeight
-  ])
-
-  useEffect(() => {
-    const handleWindowResize = (): void => {
-      setWindowSize([window.innerWidth, window.innerHeight])
-    }
-
-    window.addEventListener('resize', handleWindowResize)
-
-    return () => {
-      window.removeEventListener('resize', handleWindowResize)
-    }
-  }, [])
-
-  const collapsed = windowSize[0] >= 575.98
-
   return (
-    <li className={classNames('nav-item', { 'is-navbar': collapsed }, props.className)}>
-      <Cmp
-        onClick={(e: any) => {
-          if (!collapsed) {
-            console.log(collapsed)
-            if (!isPopped) {
-              e.preventDefault()
-            }
-            setPop(!isPopped)
-          }
-        }} {...rest} className={classNames('item', 'dropdown')}
-      >{Title}
-      </Cmp>
-      <ul className={classNames('nav-items', { collapsed: !collapsed && isPopped })}>
-        {props.children}
-      </ul>
-    </li>
+    <NavContext.Consumer>
+      {(context) =>{
+        return(
+          <li className={classNames('nav-item', { 'is-navbar': !context.isCollapse }, props.className)}>
+            <Cmp
+              onClick={(e: any) => {
+                if (context.isCollapse) {
+                  if (!isPopped) {
+                    e.preventDefault()
+                  }
+                  setPop(!isPopped)
+                }
+              }} {...rest} className={classNames('item', 'dropdown')}
+            >{Title}
+            </Cmp>
+            <ul className={classNames('nav-items', { collapsed: context.isCollapse && isPopped })}>
+              {props.children}
+            </ul>
+          </li>
+        )
+      }}
+    </NavContext.Consumer>
   )
 }
 

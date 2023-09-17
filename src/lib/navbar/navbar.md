@@ -167,7 +167,6 @@ import classnames from 'classnames'
 ```tsx static
 import { Navbar, Collapse, Item, Items, Logo } from '../'
 import classnames from 'classnames'
-
 ;<Navbar className={classnames('navbar-light', 'bg-white')}></Navbar>
 ```
 
@@ -176,7 +175,6 @@ import classnames from 'classnames'
 ```tsx static
 import { Navbar, Collapse, Item, Items, Logo } from '../'
 import classnames from 'classnames'
-
 ;<Navbar
   className={classnames('navbar-light', 'bg-white', 'fixed-top')}
 ></Navbar>
@@ -187,7 +185,6 @@ import classnames from 'classnames'
 ```tsx static
 import { Navbar, Collapse, Item, Items, Logo } from '../'
 import classnames from 'classnames'
-
 ;<Navbar
   className={classnames('navbar-light', 'bg-white', 'fixed-bottom')}
 ></Navbar>
@@ -198,7 +195,6 @@ import classnames from 'classnames'
 ```tsx static
 import { Navbar, Collapse, Item, Items, Logo } from '../'
 import classnames from 'classnames'
-
 ;<Navbar
   className={classnames('navbar-light', 'bg-white', 'sticky-top')}
 ></Navbar>

@@ -19,7 +19,7 @@ function Collapse (props: CollapseProps): JSX.Element {
       </div>
       <Nav collapsed={isCollapsed}>
         {props.children}
-      </Nav>
+      </Nav>  
     </>
   )
 }

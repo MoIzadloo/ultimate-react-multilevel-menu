@@ -1,7 +1,11 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useState, createContext } from 'react'
 import CollapseProps from './nav.props'
 import classNames from 'classnames'
 import './nav.less'
+
+export const NavContext = createContext({
+  isCollapse: false
+});
 
 /**
  * A generic Nav
@@ -15,12 +19,21 @@ function Nav (props: CollapseProps): JSX.Element {
   }, [props.collapsed])
   return (
     <>
-      <ul className={classNames('nav')}>
-        {props.children}
-      </ul>
-      <ul className={classNames('navbar-collapse', { show: !isCollapsed })}>
-        {props.children}
-      </ul>
+     <NavContext.Provider value={{
+          isCollapse: false
+      }}>
+        <ul className={classNames('nav')}>
+          {props.children}
+        </ul>
+      </NavContext.Provider>
+      
+      <NavContext.Provider value={{
+          isCollapse: true
+      }}>
+        <ul className={classNames('navbar-collapse', { show: !isCollapsed })}>
+          {props.children}
+        </ul>
+      </NavContext.Provider>
     </>
   )
 }

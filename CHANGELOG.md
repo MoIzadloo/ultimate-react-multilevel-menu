@@ -1,7 +1,8 @@
 # [v3.2.0](https://github.com/MoIzadloo/ultimate-react-multilevel-menu/compare/v3.1.0...v3.2.0) (2023-09-16)
 
 ## ✨ New Features
-- [`f44488f`](https://github.com/MoIzadloo/ultimate-react-multilevel-menu/commit/f44488f)  feat: Position utilities have been added
+
+- [`f44488f`](https://github.com/MoIzadloo/ultimate-react-multilevel-menu/commit/f44488f) feat: Position utilities have been added
 
 # [v3.1.0](https://github.com/MoIzadloo/ultimate-react-multilevel-menu/compare/v3.0.0...v3.1.0) (2023-09-14)
 
