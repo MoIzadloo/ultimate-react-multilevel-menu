@@ -11,7 +11,7 @@ export const NavContext = createContext({
  * A generic Nav
  * @returns Element
  */
-function Nav (props: CollapseProps): JSX.Element {
+function Nav (props: CollapseProps): React.ReactElement {
   const { collapsed = false } = props
   const [isCollapsed, setIsCollapsed] = useState(collapsed)
   useEffect(() => {

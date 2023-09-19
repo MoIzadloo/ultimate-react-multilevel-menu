@@ -7,7 +7,7 @@ import './item.less'
  * A generic Item
  * @returns Element
  */
-function Item (props: ItemProps): JSX.Element {
+function Item (props: ItemProps): React.ReactElement {
   const { as: Cmp = 'a', ...rest } = props
   return (
     <li className={classNames('nav-item', props.className)}>

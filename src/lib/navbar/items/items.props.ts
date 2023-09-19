@@ -1,11 +1,9 @@
-import { ReactNode, ElementType } from 'react'
+import React from 'react'
+import { AsProp } from '../../helper'
 
 interface ItemsProps
-  extends Partial<Omit<Omit<HTMLAnchorElement, 'children'>, 'title'>> {
-  children?: ReactNode
-  title?: ElementType | string
-  href?: string
-  as?: ElementType
+  extends AsProp, Omit<React.AnchorHTMLAttributes<HTMLAnchorElement>, 'title'> {
+  title?: React.ReactNode
 }
 
 export default ItemsProps

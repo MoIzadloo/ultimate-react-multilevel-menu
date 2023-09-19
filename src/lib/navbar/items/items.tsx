@@ -8,8 +8,8 @@ import { NavContext } from '../nav/nav'
  * A generic Items
  * @returns Element
  */
-function Items (props: ItemsProps): JSX.Element {
-  const { as: Cmp = 'a', title: Title, ...rest } = props
+function Items (props: ItemsProps): React.ReactElement {
+  const { as: Cmp = 'a', ...rest } = props
   const [isPopped, setPop] = useState(false)
 
   return (
@@ -26,7 +26,7 @@ function Items (props: ItemsProps): JSX.Element {
                   setPop(!isPopped)
                 }
               }} {...rest} className={classNames('item', 'dropdown')}
-            >{Title}
+            >{rest.title}
             </Cmp>
             <ul className={classNames('nav-items', { collapsed: context.isCollapse && isPopped })}>
               {props.children}

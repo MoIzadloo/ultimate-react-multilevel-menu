@@ -1,7 +1,6 @@
-import { ReactNode } from 'react'
+import React from 'react'
 
-interface NavProps extends Partial<Omit<HTMLDivElement, 'children'>> {
-  children?: ReactNode
+interface NavProps extends React.HTMLAttributes<HTMLElement> {
   dir?: 'ltr' | 'rtl'
 }
 

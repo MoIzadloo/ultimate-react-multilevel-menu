@@ -7,7 +7,7 @@ import './navbar.less'
  * A generic Navbar
  * @returns Element
  */
-function Navbar (props: NavProps): JSX.Element {
+function Navbar (props: NavProps): React.ReactElement {
   return (
     <nav className={classNames('navbar', props.className, { rtl: props.dir === 'rtl' ? 'rtl' : '' })}>
       {props.children}

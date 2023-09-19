@@ -8,7 +8,7 @@ import Nav from '../nav/nav'
  * A generic Collapse
  * @returns Element
  */
-function Collapse (props: CollapseProps): JSX.Element {
+function Collapse (props: CollapseProps): React.ReactElement {
   const [isCollapsed, setIsCollapsed] = useState(true)
   return (
     <>

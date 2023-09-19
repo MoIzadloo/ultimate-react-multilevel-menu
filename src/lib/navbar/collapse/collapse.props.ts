@@ -1,7 +1,6 @@
-import { ReactNode } from 'react'
+import React from 'react'
 
-interface CollapseProps extends Partial<Omit<HTMLDivElement, 'children'>> {
-  children?: ReactNode
+interface CollapseProps extends React.HTMLAttributes<HTMLElement> {
 }
 
 export default CollapseProps
