@@ -2,20 +2,26 @@ import React from 'react'
 import ItemProps from './item.props'
 import classNames from 'classnames'
 import './item.less'
+import { PrefixRefForwardingComponent } from '../../helper'
 
 /**
  * A generic Item
  * @returns Element
  */
-function Item (props: ItemProps): React.ReactElement {
-  const { as: Cmp = 'a', ...rest } = props
+const Item: PrefixRefForwardingComponent<'a', ItemProps> = React.forwardRef<HTMLElement, ItemProps>((
+  {
+    as: Component = 'a',
+    ...props
+  },
+  ref
+) => {
   return (
     <li className={classNames('nav-item', props.className)}>
-      <Cmp {...rest} className={classNames('item')}>
+      <Component ref={ref} {...props} className={classNames('item')}>
         {props.children}
-      </Cmp>
+      </Component>
     </li>
   )
-}
+})
 
 export default Item

@@ -3,21 +3,29 @@ import ItemsProps from './items.props'
 import classNames from 'classnames'
 import './items.less'
 import { NavContext } from '../nav/nav'
+import { PrefixRefForwardingComponent } from '../../helper'
 
 /**
  * A generic Items
  * @returns Element
  */
-function Items (props: ItemsProps): React.ReactElement {
-  const { as: Cmp = 'a', ...rest } = props
+const Items: PrefixRefForwardingComponent<'a', ItemsProps> = React.forwardRef<HTMLElement, ItemsProps>((
+  {
+    as: Component = 'a',
+    title,
+    ...props
+  },
+  ref
+) => {
   const [isPopped, setPop] = useState(false)
 
   return (
     <NavContext.Consumer>
-      {(context) =>{
-        return(
+      {(context) => {
+        return (
           <li className={classNames('nav-item', { 'is-navbar': !context.isCollapse }, props.className)}>
-            <Cmp
+            <Component
+              ref={ref}
               onClick={(e: any) => {
                 if (context.isCollapse) {
                   if (!isPopped) {
@@ -25,9 +33,9 @@ function Items (props: ItemsProps): React.ReactElement {
                   }
                   setPop(!isPopped)
                 }
-              }} {...rest} className={classNames('item', 'dropdown')}
-            >{rest.title}
-            </Cmp>
+              }} {...props} className={classNames('item', 'dropdown')}
+            >{title}
+            </Component>
             <ul className={classNames('nav-items', { collapsed: context.isCollapse && isPopped })}>
               {props.children}
             </ul>
@@ -36,6 +44,6 @@ function Items (props: ItemsProps): React.ReactElement {
       }}
     </NavContext.Consumer>
   )
-}
+})
 
 export default Items

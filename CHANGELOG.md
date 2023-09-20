@@ -1,12 +1,14 @@
 # [v3.3.1](https://github.com/MoIzadloo/ultimate-react-multilevel-menu/compare/v3.3.0...v3.3.1) (2023-09-17)
 
 ## 🐛 Bug Fixes
-- [`ece0154`](https://github.com/MoIzadloo/ultimate-react-multilevel-menu/commit/ece0154)  fix: Use react context instead of window
+
+- [`ece0154`](https://github.com/MoIzadloo/ultimate-react-multilevel-menu/commit/ece0154) fix: Use react context instead of window
 
 # [v3.3.0](https://github.com/MoIzadloo/ultimate-react-multilevel-menu/compare/v3.2.0...v3.3.0) (2023-09-16)
 
 ## ✨ New Features
-- [`d783a64`](https://github.com/MoIzadloo/ultimate-react-multilevel-menu/commit/d783a64)  feat: Collapse user-select disabled
+
+- [`d783a64`](https://github.com/MoIzadloo/ultimate-react-multilevel-menu/commit/d783a64) feat: Collapse user-select disabled
 
 # [v3.2.0](https://github.com/MoIzadloo/ultimate-react-multilevel-menu/compare/v3.1.0...v3.2.0) (2023-09-16)
 

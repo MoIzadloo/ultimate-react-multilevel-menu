@@ -2,20 +2,26 @@ import React from 'react'
 import LogoProps from './logo.props'
 import classNames from 'classnames'
 import './logo.less'
+import { PrefixRefForwardingComponent } from '../../helper'
 
 /**
  * A generic Logo
  * @returns Element
  */
-function Logo (props: LogoProps): React.ReactElement {
-  const { as: Cmp = 'a', ...rest } = props
+const Logo: PrefixRefForwardingComponent<'a', LogoProps> = React.forwardRef<HTMLElement, LogoProps>((
+  {
+    as: Component = 'a',
+    ...props
+  },
+  ref
+) => {
   return (
     <div className={classNames('logo-container', props.className)}>
-      <Cmp {...rest}>
+      <Component ref={ref} {...props}>
         {props.children}
-      </Cmp>
+      </Component>
     </div>
   )
-}
+})
 
 export default Logo

@@ -5,7 +5,7 @@ import './nav.less'
 
 export const NavContext = createContext({
   isCollapse: false
-});
+})
 
 /**
  * A generic Nav
@@ -19,17 +19,19 @@ function Nav (props: CollapseProps): React.ReactElement {
   }, [props.collapsed])
   return (
     <>
-     <NavContext.Provider value={{
-          isCollapse: false
-      }}>
+      <NavContext.Provider value={{
+        isCollapse: false
+      }}
+      >
         <ul className={classNames('nav')}>
           {props.children}
         </ul>
       </NavContext.Provider>
-      
+
       <NavContext.Provider value={{
-          isCollapse: true
-      }}>
+        isCollapse: true
+      }}
+      >
         <ul className={classNames('navbar-collapse', { show: !isCollapsed })}>
           {props.children}
         </ul>
