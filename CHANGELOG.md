@@ -1,3 +1,8 @@
+# [v3.3.3](https://github.com/MoIzadloo/ultimate-react-multilevel-menu/compare/v3.3.2...v3.3.3) (2023-09-20)
+
+## 🐛 Bug Fixes
+- [`f18490a`](https://github.com/MoIzadloo/ultimate-react-multilevel-menu/commit/f18490a)  fix: typescript as property errors
+
 # [v3.3.2](https://github.com/MoIzadloo/ultimate-react-multilevel-menu/compare/v3.3.1...v3.3.2) (2023-09-19)
 
 ## 🐛 Bug Fixes
