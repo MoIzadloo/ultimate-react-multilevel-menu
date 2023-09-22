@@ -1,7 +1,8 @@
 # [v3.3.2](https://github.com/MoIzadloo/ultimate-react-multilevel-menu/compare/v3.3.1...v3.3.2) (2023-09-19)
 
 ## 🐛 Bug Fixes
-- [`697d438`](https://github.com/MoIzadloo/ultimate-react-multilevel-menu/commit/697d438)  fix: typescript hreflang problem
+
+- [`697d438`](https://github.com/MoIzadloo/ultimate-react-multilevel-menu/commit/697d438) fix: typescript hreflang problem
 
 # [v3.3.1](https://github.com/MoIzadloo/ultimate-react-multilevel-menu/compare/v3.3.0...v3.3.1) (2023-09-17)
 

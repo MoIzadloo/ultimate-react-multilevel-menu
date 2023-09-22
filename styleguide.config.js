@@ -65,12 +65,8 @@ module.exports = {
     ],
     devtool: 'source-map',
     devServer: {
-      contentBase: '/',
-      publicPath: '/',
       port: 8080,
-      inline: true,
-      hot: true,
-      watchContentBase: true
+      hot: true
     }
   }
 }
