@@ -1,42 +1,55 @@
-import React, { useEffect, useState, createContext } from 'react'
+import React from 'react'
 import CollapseProps from './nav.props'
 import classNames from 'classnames'
 import './nav.less'
+import { CollapseContext } from '../collapse/collapse'
 
-export const NavContext = createContext({
-  isCollapse: false
-})
+interface INavContext {
+  isCollapse: boolean
+  isPoped: boolean
+  setIsPoped: React.Dispatch<React.SetStateAction<boolean>>
+}
+
+export const NavContext = React.createContext<INavContext
+| undefined>(undefined)
 
 /**
  * A generic Nav
  * @returns Element
  */
 function Nav (props: CollapseProps): React.ReactElement {
-  const { collapsed = false } = props
-  const [isCollapsed, setIsCollapsed] = useState(collapsed)
-  useEffect(() => {
-    setIsCollapsed(collapsed)
-  }, [props.collapsed])
+  const [isPoped, setIsPoped] = React.useState<boolean>(true)
   return (
-    <>
-      <NavContext.Provider value={{
-        isCollapse: false
-      }}
-      >
-        <ul className={classNames('nav')}>
-          {props.children}
-        </ul>
-      </NavContext.Provider>
+    <CollapseContext.Consumer>
+      {(context) => {
+        return (
+          <>
+            <NavContext.Provider value={{
+              isCollapse: false,
+              isPoped,
+              setIsPoped
+            }}
+            >
+              <ul className={classNames('nav')}>
+                {props.children}
+              </ul>
+            </NavContext.Provider>
 
-      <NavContext.Provider value={{
-        isCollapse: true
+            <NavContext.Provider value={{
+              isCollapse: true,
+              isPoped,
+              setIsPoped
+            }}
+            >
+              <ul className={classNames('navbar-collapse', { show: context != null ? !context.isCollapsed : true })}>
+                {props.children}
+              </ul>
+            </NavContext.Provider>
+          </>
+        )
       }}
-      >
-        <ul className={classNames('navbar-collapse', { show: !isCollapsed })}>
-          {props.children}
-        </ul>
-      </NavContext.Provider>
-    </>
+
+    </CollapseContext.Consumer>
   )
 }
 

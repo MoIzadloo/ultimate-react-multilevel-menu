@@ -1,26 +1,40 @@
-import React, { useState } from 'react'
+import React from 'react'
 import CollapseProps from './collapse.props'
 import classNames from 'classnames'
 import './collapse.less'
 import Nav from '../nav/nav'
+
+interface ICollapseContext {
+  isCollapsed: boolean
+  setIsCollapsed: React.Dispatch<React.SetStateAction<boolean>>
+}
+
+export const CollapseContext = React.createContext<ICollapseContext
+| undefined>(undefined)
 
 /**
  * A generic Collapse
  * @returns Element
  */
 function Collapse (props: CollapseProps): React.ReactElement {
-  const [isCollapsed, setIsCollapsed] = useState(true)
+  const [isCollapsed, setIsCollapsed] = React.useState<boolean>(true)
   return (
-    <>
-      <div onClick={() => { setIsCollapsed(!isCollapsed) }} className={classNames('navbar-toggler', { collapsed: !isCollapsed })}>
-        <span className={classNames('navbar-toggler-line')} />
-        <span className={classNames('navbar-toggler-line')} />
-        <span className={classNames('navbar-toggler-line')} />
-      </div>
-      <Nav collapsed={isCollapsed}>
-        {props.children}
-      </Nav>
-    </>
+    <CollapseContext.Provider value={{
+      isCollapsed,
+      setIsCollapsed
+    }}
+    >
+      <>
+        <div onClick={() => { setIsCollapsed(!isCollapsed) }} className={classNames('navbar-toggler', { collapsed: !isCollapsed })}>
+          <span className={classNames('navbar-toggler-line')} />
+          <span className={classNames('navbar-toggler-line')} />
+          <span className={classNames('navbar-toggler-line')} />
+        </div>
+        <Nav>
+          {props.children}
+        </Nav>
+      </>
+    </CollapseContext.Provider>
   )
 }
 

@@ -1,9 +1,10 @@
-import React, { useState } from 'react'
+import React from 'react'
 import ItemsProps from './items.props'
 import classNames from 'classnames'
 import './items.less'
 import { NavContext } from '../nav/nav'
 import { PrefixRefForwardingComponent } from '../../helper'
+import { CollapseContext } from '../collapse/collapse'
 
 /**
  * A generic Items
@@ -17,32 +18,50 @@ const Items: PrefixRefForwardingComponent<'a', ItemsProps> = React.forwardRef<HT
   },
   ref
 ) => {
-  const [isPopped, setPop] = useState(false)
+  const [isPopped, setPop] = React.useState(false)
 
   return (
-    <NavContext.Consumer>
+    <CollapseContext.Consumer>
       {(context) => {
         return (
-          <li className={classNames('nav-item', { 'is-navbar': !context.isCollapse }, props.className)}>
-            <Component
-              ref={ref}
-              onClick={(e: any) => {
-                if (context.isCollapse) {
-                  if (!isPopped) {
-                    e.preventDefault()
-                  }
-                  setPop(!isPopped)
+          <NavContext.Consumer>
+            {(navCtxt) => {
+              if (navCtxt != null) {
+                if (navCtxt.isPoped) {
+                  setPop(false)
+                  navCtxt.setIsPoped(false)
                 }
-              }} {...props} className={classNames('item', 'dropdown')}
-            >{title}
-            </Component>
-            <ul className={classNames('nav-items', { collapsed: context.isCollapse && isPopped })}>
-              {props.children}
-            </ul>
-          </li>
+                return (
+                  <li className={classNames('nav-item', { 'is-navbar': !navCtxt.isCollapse }, props.className)}>
+                    <Component
+                      ref={ref}
+                      onClick={(e: any) => {
+                        if (navCtxt?.isCollapse) {
+                          if (!isPopped) {
+                            e.preventDefault()
+                          } else {
+                            if (context != null && !context.isCollapsed && props.href != null && props.href !== '' && props.href !== undefined) {
+                              context.setIsCollapsed(!context.isCollapsed)
+                              navCtxt.setIsPoped(true)
+                            }
+                          }
+                          setPop(!isPopped)
+                        }
+                      }} {...props} className={classNames('item', 'dropdown')}
+                    >{title}
+                    </Component>
+                    <ul className={classNames('nav-items', { collapsed: navCtxt.isCollapse && isPopped && (context != null ? !context.isCollapsed : true) })}>
+                      {props.children}
+                    </ul>
+                  </li>
+                )
+              }
+            }}
+          </NavContext.Consumer>
         )
       }}
-    </NavContext.Consumer>
+
+    </CollapseContext.Consumer>
   )
 })
 
