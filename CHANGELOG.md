@@ -1,3 +1,8 @@
+# [v3.3.4](https://github.com/MoIzadloo/ultimate-react-multilevel-menu/compare/v3.3.3...v3.3.4) (2023-09-22)
+
+## 🐛 Bug Fixes
+- [`7225873`](https://github.com/MoIzadloo/ultimate-react-multilevel-menu/commit/7225873)  fix: Typescript forwardref return type in progress
+
 # [v3.3.3](https://github.com/MoIzadloo/ultimate-react-multilevel-menu/compare/v3.3.2...v3.3.3) (2023-09-20)
 
 ## 🐛 Bug Fixes
