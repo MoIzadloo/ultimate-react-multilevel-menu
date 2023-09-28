@@ -1,3 +1,8 @@
+# [v3.4.1](https://github.com/MoIzadloo/ultimate-react-multilevel-menu/compare/v3.4.0...v3.4.1) (2023-09-28)
+
+## 🐛 Bug Fixes
+- [`b6d7f99`](https://github.com/MoIzadloo/ultimate-react-multilevel-menu/commit/b6d7f99)  fix: multiple @types/react
+
 # [v3.4.0](https://github.com/MoIzadloo/ultimate-react-multilevel-menu/compare/v3.3.4...v3.4.0) (2023-09-27)
 
 ## ✨ New Features
