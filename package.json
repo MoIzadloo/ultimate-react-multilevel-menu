@@ -81,7 +81,7 @@
     "rollup-plugin-peer-deps-external": "^2.2.4",
     "semantic-release-gitmoji": "^1.6.4",
     "webpack": "^5.88.2",
-    "@types/react-dom": "18.2.7",
+    "@types/react-dom": "18.2.8",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
   },
