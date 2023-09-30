@@ -3,8 +3,7 @@ import ItemProps from './item.props'
 import classNames from 'classnames'
 import './item.less'
 import { PrefixRefForwardingComponent } from '../../helper'
-import { CollapseContext } from '../collapse/collapse'
-import { NavContext } from '../nav/nav'
+import { CollapseContext, NavContext } from '../../context'
 
 /**
  * A generic Item

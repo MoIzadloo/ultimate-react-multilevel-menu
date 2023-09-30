@@ -2,16 +2,7 @@ import React from 'react'
 import CollapseProps from './nav.props'
 import classNames from 'classnames'
 import './nav.less'
-import { CollapseContext } from '../collapse/collapse'
-
-interface INavContext {
-  isCollapse: boolean
-  isPoped: boolean
-  setIsPoped: React.Dispatch<React.SetStateAction<boolean>>
-}
-
-export const NavContext = React.createContext<INavContext
-| undefined>(undefined)
+import { CollapseContext, NavContext } from '../../context'
 
 /**
  * A generic Nav

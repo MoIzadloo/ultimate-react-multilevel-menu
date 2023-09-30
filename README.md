@@ -39,7 +39,7 @@ Make sure to include shipped CSS in your application to apply the correct stylin
 {
   /* The following line can be included in your src/index.js or App.js file */
 }
-import 'ultimate-react-multilevel-menu/dist/index.css'
+import 'ultimate-react-multilevel-menu/dist/esm/index.css'
 ```
 
 ## Minimum Working Set Up

@@ -3,14 +3,7 @@ import CollapseProps from './collapse.props'
 import classNames from 'classnames'
 import './collapse.less'
 import Nav from '../nav/nav'
-
-interface ICollapseContext {
-  isCollapsed: boolean
-  setIsCollapsed: React.Dispatch<React.SetStateAction<boolean>>
-}
-
-export const CollapseContext = React.createContext<ICollapseContext
-| undefined>(undefined)
+import { CollapseContext } from '../../context'
 
 /**
  * A generic Collapse
