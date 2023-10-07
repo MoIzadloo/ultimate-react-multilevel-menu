@@ -5,8 +5,9 @@ interface ICollapseContext {
   setIsCollapsed: React.Dispatch<React.SetStateAction<boolean>>
 }
 
-export const CollapseContext = React.createContext<ICollapseContext
-| undefined>(undefined)
+export const CollapseContext = React.createContext<
+ICollapseContext | undefined
+>(undefined)
 
 interface INavContext {
   isCollapse: boolean
@@ -14,5 +15,6 @@ interface INavContext {
   setIsPoped: React.Dispatch<React.SetStateAction<boolean>>
 }
 
-export const NavContext = React.createContext<INavContext
-| undefined>(undefined)
+export const NavContext = React.createContext<INavContext | undefined>(
+  undefined
+)

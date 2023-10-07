@@ -9,7 +9,7 @@ import './navbar.less'
  */
 function Navbar (props: NavProps): React.ReactElement {
   return (
-    <nav className={classNames('navbar', props.className, { rtl: props.dir === 'rtl' ? 'rtl' : '' })}>
+    <nav {...props} className={classNames('navbar', props.className, { rtl: props.dir === 'rtl' ? 'rtl' : '' })}>
       {props.children}
     </nav>
   )

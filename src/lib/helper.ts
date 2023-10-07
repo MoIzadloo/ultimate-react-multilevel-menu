@@ -1,4 +1,5 @@
 import React from 'react'
+import '@testing-library/jest-dom'
 
 export type Omit<T, U> = Pick<T, Exclude<keyof T, keyof U>>
 export type ReplaceProps<Inner extends React.ElementType, P> = Omit<
@@ -9,7 +10,7 @@ P
 export interface AsProp<As extends React.ElementType = React.ElementType> {
   as?: As
 }
-export type PrefixRefForwardingComponent<
+export type RefForwardingComponent<
   TInitial extends React.ElementType,
   P = unknown
 > = <As extends React.ElementType = TInitial>(

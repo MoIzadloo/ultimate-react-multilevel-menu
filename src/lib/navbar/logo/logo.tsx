@@ -2,21 +2,23 @@ import React from 'react'
 import LogoProps from './logo.props'
 import classNames from 'classnames'
 import './logo.less'
-import { PrefixRefForwardingComponent } from '../../helper'
+import { RefForwardingComponent } from '../../helper'
 
 /**
  * A generic Logo
  * @returns Element
  */
-const Logo: PrefixRefForwardingComponent<'a', LogoProps> = React.forwardRef<HTMLElement, LogoProps>((
+const Logo: RefForwardingComponent<'a', LogoProps> = React.forwardRef<HTMLElement, LogoProps>((
   {
     as: Component = 'a',
+    className,
+    'data-testid': dataTestid,
     ...props
   },
   ref
 ) => {
   return (
-    <div className={classNames('logo-container', props.className)}>
+    <div className={classNames('logo-container', className)} data-testid={dataTestid}>
       <Component ref={ref} {...props}>
         {props.children}
       </Component>

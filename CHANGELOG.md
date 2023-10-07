@@ -1,17 +1,20 @@
 # [v3.4.1](https://github.com/MoIzadloo/ultimate-react-multilevel-menu/compare/v3.4.0...v3.4.1) (2023-09-28)
 
 ## 🐛 Bug Fixes
-- [`b6d7f99`](https://github.com/MoIzadloo/ultimate-react-multilevel-menu/commit/b6d7f99)  fix: multiple @types/react
+
+- [`b6d7f99`](https://github.com/MoIzadloo/ultimate-react-multilevel-menu/commit/b6d7f99) fix: multiple @types/react
 
 # [v3.4.0](https://github.com/MoIzadloo/ultimate-react-multilevel-menu/compare/v3.3.4...v3.4.0) (2023-09-27)
 
 ## ✨ New Features
-- [`b9c02f0`](https://github.com/MoIzadloo/ultimate-react-multilevel-menu/commit/b9c02f0)  feat: Reset collapse state onclick
+
+- [`b9c02f0`](https://github.com/MoIzadloo/ultimate-react-multilevel-menu/commit/b9c02f0) feat: Reset collapse state onclick
 
 # [v3.3.4](https://github.com/MoIzadloo/ultimate-react-multilevel-menu/compare/v3.3.3...v3.3.4) (2023-09-22)
 
 ## 🐛 Bug Fixes
-- [`7225873`](https://github.com/MoIzadloo/ultimate-react-multilevel-menu/commit/7225873)  fix: Typescript forwardref return type in progress
+
+- [`7225873`](https://github.com/MoIzadloo/ultimate-react-multilevel-menu/commit/7225873) fix: Typescript forwardref return type in progress
 
 # [v3.3.3](https://github.com/MoIzadloo/ultimate-react-multilevel-menu/compare/v3.3.2...v3.3.3) (2023-09-20)
 

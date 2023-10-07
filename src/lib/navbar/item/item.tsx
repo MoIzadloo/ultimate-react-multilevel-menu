@@ -2,14 +2,14 @@ import React from 'react'
 import ItemProps from './item.props'
 import classNames from 'classnames'
 import './item.less'
-import { PrefixRefForwardingComponent } from '../../helper'
+import { RefForwardingComponent } from '../../helper'
 import { CollapseContext, NavContext } from '../../context'
 
 /**
  * A generic Item
  * @returns Element
  */
-const Item: PrefixRefForwardingComponent<'a', ItemProps> = React.forwardRef<HTMLElement, ItemProps>((
+const Item: RefForwardingComponent<'a', ItemProps> = React.forwardRef<HTMLElement, ItemProps>((
   {
     as: Component = 'a',
     ...props
