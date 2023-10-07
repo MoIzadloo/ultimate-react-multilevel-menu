@@ -1,3 +1,8 @@
+# [v3.4.2](https://github.com/MoIzadloo/ultimate-react-multilevel-menu/compare/v3.4.1...v3.4.2) (2023-09-30)
+
+## 🐛 Bug Fixes
+- [`5f757c3`](https://github.com/MoIzadloo/ultimate-react-multilevel-menu/commit/5f757c3)  fix: context.consumer setState warning fixed
+
 # [v3.4.1](https://github.com/MoIzadloo/ultimate-react-multilevel-menu/compare/v3.4.0...v3.4.1) (2023-09-28)
 
 ## 🐛 Bug Fixes
