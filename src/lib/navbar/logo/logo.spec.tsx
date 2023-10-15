@@ -13,11 +13,11 @@ describe('<Logo>', () => {
     })
     it('renders correctly', () => {
         const { getByTestId } = renderLogo({})
-        const logoElem = getByTestId(testid);
-        expect(logoElem.classList.contains('logo-container')).toBe(true)
-        expect(logoElem.classList.contains('custom-class')).toBe(true)
-        expect(logoElem.firstElementChild!.getAttribute('href')).toBe('/')
-        expect(logoElem.firstElementChild!.getAttribute('hrefLang')).toBe('en')
+        const logoElement = getByTestId(testid);
+        expect(logoElement.classList.contains('logo-container')).toBe(true)
+        expect(logoElement.classList.contains('custom-class')).toBe(true)
+        expect(logoElement.firstElementChild!.getAttribute('href')).toBe('/')
+        expect(logoElement.firstElementChild!.getAttribute('hrefLang')).toBe('en')
     })
     it('logo with image', () => {
         const { getByTestId } = renderLogo({
@@ -25,12 +25,12 @@ describe('<Logo>', () => {
                 <img src={'logo.png'} />
             )
         })
-        const logoElem = getByTestId(testid);
-        expect(logoElem.classList.contains('logo-container')).toBe(true)
-        expect(logoElem.classList.contains('custom-class')).toBe(true)
-        expect(logoElem.firstElementChild!.getAttribute('href')).toBe('/')
-        expect(logoElem.firstElementChild!.getAttribute('hrefLang')).toBe('en')
-        expect(logoElem.firstElementChild!.firstElementChild!.getAttribute('src')).toBe('logo.png')
+        const logoElement = getByTestId(testid);
+        expect(logoElement.classList.contains('logo-container')).toBe(true)
+        expect(logoElement.classList.contains('custom-class')).toBe(true)
+        expect(logoElement.firstElementChild!.getAttribute('href')).toBe('/')
+        expect(logoElement.firstElementChild!.getAttribute('hrefLang')).toBe('en')
+        expect(logoElement.firstElementChild!.firstElementChild!.getAttribute('src')).toBe('logo.png')
     })
 })
 

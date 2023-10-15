@@ -1,7 +1,7 @@
 import { render } from '@testing-library/react'
 import React from 'react'
 import { Navbar, Collapse, Item, Items, Logo } from '../'
-import classnames from 'classnames'
+import classNames from 'classnames'
 
 const testid = 'navbar'
 
@@ -25,34 +25,38 @@ const children = (
 
 describe('<Navbar>', () => {
     it('matches snapshot', () => {
-        const body = renderNavar({})
+        const body = renderNavbar({})
         expect(body).toMatchSnapshot()
     })
     it('renders correctly', () => {
-        const { getByTestId } = renderNavar({})
-        const navbarElem = getByTestId(testid);
-        expect(navbarElem.classList.contains('navbar')).toBe(true)
-        expect(navbarElem.classList.contains('navbar-light')).toBe(true)
-        expect(navbarElem.classList.contains('bg-white')).toBe(true)
-        expect(navbarElem.firstElementChild!.textContent).toBe('Logo')
+        const { getByTestId } = renderNavbar({})
+        const navbarElement = getByTestId(testid)
+        expect(navbarElement.classList.contains('navbar')).toBe(true)
+        expect(navbarElement.classList.contains('navbar-light')).toBe(true)
+        expect(navbarElement.classList.contains('bg-white')).toBe(true)
+        expect(navbarElement.firstElementChild!.textContent).toBe('Logo')
     })
     it('renders props:dir:rtl', () => {
-        const { getByTestId } = renderNavar({dir: "rtl"})
-            const navbarElem = getByTestId(testid);
-            expect(navbarElem.classList.contains('navbar')).toBe(true)
-            expect(navbarElem.classList.contains('navbar-light')).toBe(true)
-            expect(navbarElem.classList.contains('bg-white')).toBe(true)
-            expect(navbarElem.firstElementChild!.textContent).toBe('Logo')
+        const { getByTestId } = renderNavbar({dir: "rtl"})
+            const navbarElement = getByTestId(testid)
+            expect(navbarElement.classList.contains('navbar')).toBe(true)
+            expect(navbarElement.classList.contains('navbar-light')).toBe(true)
+            expect(navbarElement.classList.contains('bg-white')).toBe(true)
+            expect(navbarElement.firstElementChild!.textContent).toBe('Logo')
     })
-});
+    it('should render children', () => {
+        const { getByTestId } = renderNavbar({})
+        expect(getByTestId('navbar').children.length).toBeGreaterThan(2);
+    })
+})
 
 const defaultProps = {
     children,
     'data-testid': testid,
-    className: classnames('navbar-light', 'bg-white')
+    className: classNames('navbar-light', 'bg-white')
 }
 
-const renderNavar = ({...props}) =>{
+const renderNavbar = ({...props}) =>{
     return render(
     <Navbar 
         {...defaultProps}

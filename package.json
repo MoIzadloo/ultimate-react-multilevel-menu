@@ -28,7 +28,7 @@
   "scripts": {
     "format": "prettier --write \"**/*.{cjs,mjs,html,js,json,md,ts}\"",
     "start": "npm run styleguide:serve",
-    "lint": "ts-standard -p ./tsconfig.json",
+    "lint": "ts-standard -p ./tsconfig.json --fix",
     "prebuild": "rimraf ./dist",
     "postinstall": "husky install",
     "prepublishOnly": "pinst --disable",

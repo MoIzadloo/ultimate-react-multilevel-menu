@@ -13,6 +13,7 @@ const Items: RefForwardingComponent<'a', ItemsProps> = React.forwardRef<HTMLElem
   {
     as: Component = 'a',
     title,
+    'data-testid': dataTestid,
     ...props
   },
   ref
@@ -34,7 +35,7 @@ const Items: RefForwardingComponent<'a', ItemsProps> = React.forwardRef<HTMLElem
       {(context) => {
         if (navCtxt != null) {
           return (
-            <li className={classNames('nav-item', { 'is-navbar': !navCtxt?.isCollapse }, props.className)}>
+            <li data-testid={dataTestid} className={classNames('nav-item', { 'is-navbar': !navCtxt?.isCollapse }, props.className)}>
               <Component
                 ref={ref}
                 onClick={(e: any) => {

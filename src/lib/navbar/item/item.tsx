@@ -12,6 +12,7 @@ import { CollapseContext, NavContext } from '../../context'
 const Item: RefForwardingComponent<'a', ItemProps> = React.forwardRef<HTMLElement, ItemProps>((
   {
     as: Component = 'a',
+    'data-testid': dataTestid,
     ...props
   },
   ref
@@ -23,7 +24,7 @@ const Item: RefForwardingComponent<'a', ItemProps> = React.forwardRef<HTMLElemen
           <NavContext.Consumer>
             {(navCtxt) => {
               return (
-                <li className={classNames('nav-item', props.className)}>
+                <li className={classNames('nav-item', props.className)} data-testid={dataTestid}>
                   <Component
                     ref={ref} onClick={() => {
                       context?.setIsCollapsed(!context.isCollapsed)
