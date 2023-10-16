@@ -6,7 +6,10 @@ import { RefForwardingComponent } from '../../helper'
 import { CollapseContext, NavContext } from '../../context'
 
 /**
- * A generic Items
+ * The Items component is a link and a container for other Items or Items components
+ * @param href - Url link for it self
+ * @param as - The component that link render as
+ * @param className - CSS class for container ul tags
  * @returns Element
  */
 const Items: RefForwardingComponent<'a', ItemsProps> = React.forwardRef<HTMLElement, ItemsProps>((

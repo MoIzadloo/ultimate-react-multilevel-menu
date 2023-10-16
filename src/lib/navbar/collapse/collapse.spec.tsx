@@ -1,4 +1,4 @@
-import { render } from '@testing-library/react'
+import { render, fireEvent } from '@testing-library/react'
 import React from 'react'
 import { Navbar, Collapse, Item, Items, Logo } from '../'
 import classNames from 'classnames'
@@ -38,6 +38,26 @@ describe('<Collapse>', () => {
         expect(navElemnt.children.length).toBe(4)
         expect(collapseElement.classList.contains('show')).toBe(false)
         expect(collapseElement.children.length).toBe(4)
+        fireEvent.click(togglerElement)
+        expect(togglerElement.classList.contains('collapsed')).toBe(true)
+        const firstItem = collapseElement.getElementsByClassName("item")[0]
+        fireEvent.click(firstItem)
+        expect(togglerElement.classList.contains('collapsed')).toBe(false)
+        fireEvent.click(togglerElement)
+        expect(togglerElement.classList.contains('collapsed')).toBe(true)
+        const firstItems = collapseElement.getElementsByClassName("dropdown")[0]
+        fireEvent.click(firstItems)
+        expect(togglerElement.classList.contains('collapsed')).toBe(true)
+        fireEvent.click(firstItems)
+        expect(togglerElement.classList.contains('collapsed')).toBe(false)
+    })
+    it('test toggler button', () =>{
+        const { getByTestId } = renderNavbar({})
+        const togglerElement = getByTestId(testid).getElementsByClassName("navbar-toggler")[0]
+        fireEvent.click(togglerElement)
+        expect(togglerElement.classList.contains('collapsed')).toBe(true)
+        fireEvent.click(togglerElement)
+        expect(togglerElement.classList.contains('collapsed')).toBe(false)
     })
     it('should render children', () => {
         const { getByTestId } = renderNavbar({})

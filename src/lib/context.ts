@@ -6,7 +6,7 @@ interface ICollapseContext {
 }
 
 export const CollapseContext = React.createContext<
-ICollapseContext | undefined
+  ICollapseContext | undefined
 >(undefined)
 
 interface INavContext {

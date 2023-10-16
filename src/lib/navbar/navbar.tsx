@@ -4,7 +4,9 @@ import classNames from 'classnames'
 import './navbar.less'
 
 /**
- * A generic Navbar
+ * The Navbar component is the container of all other components and you can change the color scheme by using the predefined CSS classes or your custom CSS classes
+ * @param dir - Menu direction
+ * @param className - CSS class for nav tag
  * @returns Element
  */
 function Navbar (props: NavProps): React.ReactElement {

@@ -5,7 +5,10 @@ import './logo.less'
 import { RefForwardingComponent } from '../../helper'
 
 /**
- * A generic Logo
+ * The Logo component is the container of your logo which can be an image or simple text
+ * @param href - Logo url link
+ * @param as - The component that link render as
+ * @param className - CSS class for container div tags
  * @returns Element
  */
 const Logo: RefForwardingComponent<'a', LogoProps> = React.forwardRef<HTMLElement, LogoProps>((

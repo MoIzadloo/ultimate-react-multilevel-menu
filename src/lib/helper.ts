@@ -3,10 +3,10 @@ import '@testing-library/jest-dom'
 
 export type Omit<T, U> = Pick<T, Exclude<keyof T, keyof U>>
 export type ReplaceProps<Inner extends React.ElementType, P> = Omit<
-React.ComponentPropsWithRef<Inner>,
-P
+  React.ComponentPropsWithRef<Inner>,
+  P
 > &
-P
+  P
 export interface AsProp<As extends React.ElementType = React.ElementType> {
   as?: As
 }

@@ -5,7 +5,7 @@ import './nav.less'
 import { CollapseContext, NavContext } from '../../context'
 
 /**
- * A generic Nav
+ * The Nav component is a container of Item and Items components, in fact, the Collapse component uses the Nav component to wrap Item and Items components under the hood. in case you don't want the collapse toggle button you can use it directly instead.
  * @returns Element
  */
 function Nav (props: CollapseProps): React.ReactElement {

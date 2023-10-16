@@ -52,7 +52,8 @@ import {
   Items,
   Logo
 } from 'ultimate-react-multilevel-menu'
-;<Navbar className={'navbar-light bg-white'}>
+
+<Navbar className={'navbar-light bg-white'}>
   <Logo href="/">Logo</Logo>
   <Collapse>
     <Item href={'#home'}>Home</Item>
@@ -73,7 +74,7 @@ import {
 
 ### Navbar
 
-The navbar component is the container of all other components and you can change the color scheme by using the predefined CSS classes or your custom CSS classes
+The Navbar component is the container of all other components and you can change the color scheme by using the predefined CSS classes or your custom CSS classes
 
 #### Props
 
@@ -84,7 +85,7 @@ The navbar component is the container of all other components and you can change
 
 ### Collapse
 
-The collapse component is the container of the Nav component and it's responsible for making the menu responsive and elegant on small screens
+The Collapse component is the container of the Nav component and it's responsible for making the menu responsive and elegant on small screens
 
 #### Props
 
@@ -103,7 +104,7 @@ in case you don't want the collapse toggle button you can use it directly instea
 
 ### Logo
 
-The logo component is the container of your logo which can be an image or simple text
+The Logo component is the container of your logo which can be an image or simple text
 
 #### Props
 
@@ -115,7 +116,7 @@ The logo component is the container of your logo which can be an image or simple
 
 ### Item
 
-Item component is a single link
+The Item component is a single link
 
 #### Props
 
@@ -127,7 +128,7 @@ Item component is a single link
 
 ### Items
 
-Items component is a link and a container for other Items or Items components
+The Items component is a link and a container for other Items or Items components
 
 #### Props
 

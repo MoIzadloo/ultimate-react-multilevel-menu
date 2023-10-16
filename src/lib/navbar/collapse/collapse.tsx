@@ -6,7 +6,7 @@ import Nav from '../nav/nav'
 import { CollapseContext } from '../../context'
 
 /**
- * A generic Collapse
+ * The Collapse component is the container of the Nav component and it's responsible for making the menu responsive and elegant on small screens
  * @returns Element
  */
 function Collapse (props: CollapseProps): React.ReactElement {
