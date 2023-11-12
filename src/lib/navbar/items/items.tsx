@@ -6,7 +6,7 @@ import { RefForwardingComponent } from '../../helper'
 import { CollapseContext, NavContext } from '../../context'
 
 /**
- * The Items component is a link and a container for other Items or Items components
+ * The Items component is a link and a container for other Items or Item components
  * @param href - Url link for it self
  * @param as - The component that link render as
  * @param className - CSS class for container ul tags
