@@ -1,3 +1,5 @@
+# [v3.4.8](https://github.com/MoIzadloo/ultimate-react-multilevel-menu/compare/v3.4.7...v3.4.8) (2023-11-12)
+
 # [v3.4.7](https://github.com/MoIzadloo/ultimate-react-multilevel-menu/compare/v3.4.6...v3.4.7) (2023-11-12)
 
 # [v3.4.6](https://github.com/MoIzadloo/ultimate-react-multilevel-menu/compare/v3.4.5...v3.4.6) (2023-11-12)
