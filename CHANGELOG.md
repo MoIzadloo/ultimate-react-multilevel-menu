@@ -1,3 +1,8 @@
+# [v3.4.9](https://github.com/MoIzadloo/ultimate-react-multilevel-menu/compare/v3.4.8...v3.4.9) (2023-12-05)
+
+## 🐛 Bug Fixes
+- [`feb01d3`](https://github.com/MoIzadloo/ultimate-react-multilevel-menu/commit/feb01d3)  fix: nav flex-wrap
+
 # [v3.4.8](https://github.com/MoIzadloo/ultimate-react-multilevel-menu/compare/v3.4.7...v3.4.8) (2023-11-12)
 
 # [v3.4.7](https://github.com/MoIzadloo/ultimate-react-multilevel-menu/compare/v3.4.6...v3.4.7) (2023-11-12)
