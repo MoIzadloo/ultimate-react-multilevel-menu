@@ -128,7 +128,7 @@ The Item component is a single link
 
 ### Items
 
-The Items component is a link and a container for other Items or Items components
+The Items component is a link and a container for other Items or Item components
 
 #### Props
 
