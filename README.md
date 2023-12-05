@@ -53,7 +53,7 @@ import {
   Logo
 } from 'ultimate-react-multilevel-menu'
 
-<Navbar className={'navbar-light bg-white'}>
+;<Navbar className={'navbar-light bg-white'}>
   <Logo href="/">Logo</Logo>
   <Collapse>
     <Item href={'#home'}>Home</Item>
